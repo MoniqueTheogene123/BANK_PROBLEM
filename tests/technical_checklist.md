@@ -1,0 +1,58 @@
+# Bank Technical Checklist
+- Date/time:
+- Applicant name:
+- Reviewer(s):
+
+- simulation
+  - [ ] Runs `ruby simulation.rb`
+  - undefined local variable or method `bank' for main:Object (NameError)
+    - [ ] Finds line causing error `simulation.rb` 6
+    - [ ] Fixes error (class casing)
+  - undefined method `open_account`, `deposit`, `withdraw`, `close_account`, `complete?` for `main:Object` (NoMethodError)
+    - [ ] Finds line causing error in `simulation.rb`
+    - [ ] Fixes error (call on `Bank` instance `my_bank`)
+  - undefined method `-` for nil:NilClass (NoMethodError)
+    - [ ] Finds line causing error `bank.rb` 20 -> `simulation.rb` 11
+    - [ ] Fixes error (open account for "Bob")
+- Log name and initial deposit when an `account is opened`
+  - [ ] Identifies correct location
+  - [ ] Logs `"Opened account for #{name} with $#{initial_deposit}"`
+  - [ ] Adds emoji 📖
+  - [ ] Opens account for "Alice" with correct amount
+  - [ ] Opens account for "Bob" with correct amount
+  - [ ] Opens account for "Carol" with correct amount
+- Log name and amount when a `deposit` is made
+  - [ ] Identifies correct location
+  - [ ] Logs `"#{name} deposited $#{amount}"`
+  - [ ] Adds emoji 💰
+  - [ ] Deposits for "Alice" with correct amount
+  - [ ] Deposits for "Bob" with correct amount
+- Log name and amount when a `withdrawal` is made
+  - [ ] Identifies correct location
+  - [ ] Logs `"#{name} withdrew $#{amount}"`
+  - [ ] Adds emoji 💸
+  - [ ] Withdraws for "Alice" with correct amount
+  - [ ] Withdraws for "Carol" with correct amount
+- Log name and amount when a `withdrawal` is attempted but denied
+  - [ ] Identifies correct location
+  - [ ] Logs `#{name} attempted to withdraw ${amount}, but was denied`
+  - [ ] Adds emoji ❌
+  - [ ] Attempts overdraw for "Carol" with correct amount
+- Log name and remaining balance when an `account is closed`
+  - [ ] Identifies correct location
+  - [ ] Logs `Closed account for #{name}. Final balance: $#{final_balance}`
+  - [ ] Adds emoji 🔒
+  - [ ] Closes account for "Alice" with correct amount
+  - [ ] Closes account for "Bob" with correct amount
+  - [ ] Closes account for "Carol" with correct amount
+- Log all transactions for a name when an account is closed
+  - [ ] Identifies correct location
+  - [ ] Logs `Transaction history for #{name}: [#{transaction_history}]`
+  - [ ] Adds emoji 📜
+  - [ ] Logs transaction history for "Alice"
+  - [ ] Logs transaction history for "Bob"
+  - [ ] Logs transaction history for "Carol"
+- Log when all transactions are complete
+  - [ ] Identifies correct location
+  - [ ] Logs `All transactions are complete`
+  - [ ] Adds emoji ✅
